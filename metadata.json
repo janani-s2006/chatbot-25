@@ -1,0 +1,5 @@
+{
+  "name": "Academin Advisor",
+  "description": "A cloud-integrated RAG-based chatbot for engineering students, providing syllabus-aligned explanations using Google Gemini API.",
+  "requestFramePermissions": []
+}
