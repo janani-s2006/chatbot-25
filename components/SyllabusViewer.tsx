@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { syllabusData } from '../data/syllabusData';
 
@@ -20,7 +19,7 @@ const SyllabusViewer: React.FC<SyllabusViewerProps> = ({ highlightedTopic }) => 
     <div className="flex flex-col h-full bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
       <div className="px-6 py-4 border-b border-slate-100 bg-slate-50">
         <h3 className="font-bold text-slate-800">Syllabus Explorer</h3>
-        <p className="text-xs text-slate-500 mb-4">Browsing 150 topic knowledge base</p>
+        <p className="text-xs text-slate-500 mb-4">Browsing {syllabusData.length} syllabus reference entries</p>
         <div className="relative">
           <input
             type="text"
