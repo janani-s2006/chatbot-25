@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Cloud-Based Academic Advisor Chatbot (RAG-Based)
 
-# Run and deploy your AI Studio app
+## 1. Project Overview
+This project is a cloud-integrated academic chatbot designed to provide syllabus-aligned answers for engineering students.  
+The chatbot uses a Retrieval-Augmented Generation (RAG) approach to ensure that responses are grounded in academic content rather than generated purely from the language model’s prior knowledge.
 
-This contains everything you need to run your app locally.
+The system integrates a cloud-hosted Large Language Model (LLM) with a vector-based retrieval mechanism to improve accuracy, relevance, and trustworthiness of responses.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1-NUEukjJvAutQoQjj1ARIJn9v3aAHEAd
+---
 
-## Run Locally
+## 2. Problem Statement
+Engineering students often rely on generic AI chatbots or random online sources for academic doubts. These sources frequently provide broad, unverified, or syllabus-misaligned answers, which can lead to confusion and misinformation.
 
-**Prerequisites:**  Node.js
+The goal of this project is to build a cloud-based chatbot that answers academic questions using only verified syllabus content, ensuring accurate and curriculum-aligned responses.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 3. Why Retrieval-Augmented Generation (RAG)?
+Large Language Models are powerful but can hallucinate or provide incorrect information when answering directly.
+
+To address this, this project uses Retrieval-Augmented Generation (RAG), where:
+- Relevant academic content is retrieved first
+- The retrieved content is passed as context to the LLM
+- The LLM generates responses grounded in that context
+
+This approach improves factual accuracy and reliability.
+
+---
+
+## 4. System Architecture
+
+User Question
+↓
+Query Embedding
+↓
+FAISS Vector Search
+↓
+Relevant Academic Context
+↓
+Cloud LLM (Google Gemini API)
+↓
+Final Answer
